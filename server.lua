@@ -8,7 +8,7 @@ TriggerEvent('QBCore:GetObject', function(obj) QBCore = obj end)
 
 
 
-QBCore.Functions.CreateCallback("tgiann-kiralik:kira-kontrol", function(source, cb, price)
+QBCore.Functions.CreateCallback("kirakontrol", function(source, cb, price)
     local src = source
     local xPlayer = QBCore.Functions.GetPlayer(src)
     if Plakalar[xPlayer.PlayerData.citizenid] then
@@ -27,12 +27,12 @@ QBCore.Functions.CreateCallback("tgiann-kiralik:kira-kontrol", function(source, 
             cb(false)
         end
     end
-    print(json.encode(Plakalar))
+
 end)
 
 
 
-QBCore.Functions.CreateCallback("tgiann-kiralik:aracBirak", function(source, cb, plate)
+QBCore.Functions.CreateCallback("aracteslim", function(source, cb, plate)
     local src = source
     local xPlayer = QBCore.Functions.GetPlayer(src)
     if Plakalar[xPlayer.PlayerData.citizenid] then

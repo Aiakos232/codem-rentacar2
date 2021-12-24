@@ -74,7 +74,7 @@ RegisterNUICallback("itemdata", function(data,cb)
     print(carspawnh)
     Citizen.Wait(100)
     local spawnPoint = {x = carspawnx, y = carspawny, z = carspawnz, h = carspawnh}
-    QBCore.Functions.TriggerCallback("tgiann-kiralik:kira-kontrol", function(durum, plaka)
+    QBCore.Functions.TriggerCallback("kirakontrol", function(durum, plaka)
       if durum then
            local playerPed = PlayerPedId()
            local playerCoords = GetEntityCoords(playerPed)
@@ -188,7 +188,7 @@ AddEventHandler('aracteslimet', function()
             end
 
             if free then
-                QBCore.Functions.TriggerCallback("tgiann-kiralik:aracBirak", function(durum)
+                QBCore.Functions.TriggerCallback("aracteslim", function(durum)
                     if durum then
                         if DoesEntityExist(Arac) then
                             TaskLeaveVehicle(playerPed, Arac, 0)
